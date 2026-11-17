@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fastapi
 uvicorn[standard]
 openai
@@ -12,3 +13,18 @@ python-docx
 faiss-cpu
 pytest
 httpx
+=======
+fastapi
+uvicorn
+openai
+pandas
+numpy
+python-dotenv
+pydantic
+streamlit
+plotly
+pymupdf
+python-docx
+faiss-cpu
+pytest
+>>>>>>> 6595da557774913468e0522eb0608cbd635dd639
