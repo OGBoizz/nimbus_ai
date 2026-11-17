@@ -1,0 +1,52 @@
+[
+    {
+        "Test":  "Health",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"healthy\",\"application\":\"Nimbus AI\",\"api\":\"running\"}"
+    },
+    {
+        "Test":  "Scorecard",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"found\":true,\"as_of\":\"2026-11-15\",\"rows\":[{\"initiative_id\":\"CP-01\",\"name\":\"HR Policy Copilot\",\"months_live\":6,\"licensed_users\":500,\"latest_wau\":340,\"cost_to_date\":4000000.0,\"realised_benefit_to_date\":6000000.0,\"planned_annual_benefit\":10000000.0,\"adoption\":0.68,\"wau_change\":0.2143,\"roi\":0.5,\"avg_monthly_benefit\":1000000.0,\"payback_months\":4.0,\"run_rate_vs_plan\":1.2,\"status\":\"Green\",\"notes\":[]},{\"initiative_id\":\"CP-02\",\"name\":\"Sales Copilot\",\"months_live\":3,\"licensed_users\":400,\"latest_wau\":100,\"cost_to_date\":3000000.0,\"realised_benefit_to_date\":900000.0,\"planned_annual_benefit\":6000000.0,\"adoption\":0.25,\"wau_change\":-0.3333,\"roi\":-0.7,\"avg_monthly_benefit\":300000.0,\"payback_months\":10.0,\"run_rate_vs_plan\":0.6,\"status\":\"Red\",\"notes\":[]},{\"initiative_id\":\"BOT-01\",\"name\":\"IT Helpdesk Bot\",\"months_live\":9,\"licensed_users\":1000,\"latest_wau\":600,\"cost_to_date\":2000000.0,\"realised_benefit_to_date\":2700000.0,\"planned_annual_benefit\":3000000.0,\"adoption\":0.6,\"wau_change\":0.1538,\"roi\":0.35,\"avg_monthly_benefit\":300000.0,\"payback_months\":6.67,\"run_rate_vs_plan\":1.2,\"status\":\"Green\",\"notes\":[]},{\"initiative_id\":\"BOT-02\",\"name\":\"Customer FAQ Bot\",\"months_live\":4,\"licensed_users\":800,\"latest_wau\":360,\"cost_to_date\":1500000.0,\"realised_benefit_to_date\":1600000.0,\"planned_annual_benefit\":5000000.0,\"adoption\":0.45,\"wau_change\":0.2,\"roi\":0.0667,\"avg_monthly_benefit\":400000.0,\"payback_months\":3.75,\"run_rate_vs_plan\":0.96,\"status\":\"Amber\",\"notes\":[]},{\"initiative_id\":\"PM-01\",\"name\":\"Demand Forecasting Model\",\"months_live\":8,\"licensed_users\":120,\"latest_wau\":84,\"cost_to_date\":5000000.0,\"realised_benefit_to_date\":4000000.0,\"planned_annual_benefit\":8000000.0,\"adoption\":0.7,\"wau_change\":0.2,\"roi\":-0.2,\"avg_monthly_benefit\":500000.0,\"payback_months\":10.0,\"run_rate_vs_plan\":0.75,\"status\":\"Red\",\"notes\":[]},{\"initiative_id\":\"PM-02\",\"name\":\"Churn Predictor\",\"months_live\":2,\"licensed_users\":200,\"latest_wau\":100,\"cost_to_date\":1000000.0,\"realised_benefit_to_date\":1000000.0,\"planned_annual_benefit\":4000000.0,\"adoption\":0.5,\"wau_change\":0.1111,\"roi\":0.0,\"avg_monthly_benefit\":500000.0,\"payback_months\":2.0,\"run_rate_vs_plan\":1.5,\"status\":\"Amber\",\"notes\":[]}],\"source\":\"data/clean/initiatives.csv, usage.csv, finance.csv (scorecard v1)\"}}"
+    },
+    {
+        "Test":  "Weekly Report",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"status\":\"success\",\"report\":\"# Nimbus AI โ?? Weekly Executive Report\\n\\nGenerated: 2026-11-17 15:55\\nScorecard as of: 2026-11-15\\n\\n## Executive Summary\\n\\n- Total initiatives: **6**\\n- Green: **2**\\n- Amber: **2**\\n- Red: **2**\\n- At-risk (Amber + Red): **4**\\n\\n## Initiative Scorecard\\n\\n| Initiative | Status | Adoption | ROI | WAU Change |\\n|---|---|---:|---:|---:|\\n| HR Policy Copilot (CP-01) | Green | 68.0% | 50.0% | 21.4% |\\n| Sales Copilot (CP-02) | Red | 25.0% | -70.0% | -33.3% |\\n| IT Helpdesk Bot (BOT-01) | Green | 60.0% | 35.0% | 15.4% |\\n| Customer FAQ Bot (BOT-02) | Amber | 45.0% | 6.7% | 20.0% |\\n| Demand Forecasting Model (PM-01) | Red | 70.0% | -20.0% | 20.0% |\\n| Churn Predictor (PM-02) | Amber | 50.0% | 0.0% | 11.1% |\\n\\n## At-Risk Initiatives\\n\\n### Customer FAQ Bot โ?? Amber\\n- Adoption: 45.0%\\n- ROI: 6.7%\\n- Payback: 3.75 months\\n- Run-rate vs plan: 96.0%\\n\\n### Churn Predictor โ?? Amber\\n- Adoption: 50.0%\\n- ROI: 0.0%\\n- Payback: 2.0 months\\n- Run-rate vs plan: 150.0%\\n\\n### Sales Copilot โ?? Red\\n- Adoption: 25.0%\\n- ROI: -70.0%\\n- Payback: 10.0 months\\n- Run-rate vs plan: 60.0%\\n\\n### Demand Forecasting Model โ?? Red\\n- Adoption: 70.0%\\n- ROI: -20.0%\\n- Payback: 10.0 months\\n- Run-rate vs plan: 75.0%\\n\\n## Recommended Management Attention\\n\\n- **Sales Copilot:** Low adoption and negative ROI. Review adoption barriers and costs.\\n- **Demand Forecasting Model:** Negative ROI despite high adoption. Investigate benefit realization and cost.\\n- **Customer FAQ Bot:** Monitor adoption and benefit realization; currently Amber.\\n- **Churn Predictor:** Monitor ROI and adoption before scaling.\\n\\n## Source\\n\\ndata/clean/initiatives.csv, usage.csv, finance.csv (scorecard v1)\",\"file\":\"E:\\\\HCL_Hackathon\\\\Nimbus_AI\\\\outputs\\\\weekly_report.md\",\"initiatives_evaluated\":6,\"green\":2,\"amber\":2,\"red\":2,\"at_risk_count\":4}}"
+    },
+    {
+        "Test":  "Data Changelog",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"available\":true,\"content\":\"# Nimbus AI โ?? Data Cleaning Changelog\\n\\nGenerated: 2026-11-17 15:55:43\\n\\n## Summary\\n\\n- Initiatives processed: 6\\n- Usage records processed: 18\\n- Finance records processed: 6\\n- Data-quality corrections logged: 14\\n\\n## Corrections\\n\\n- Initiatives: normalized ID \\u0027 cp-02\\u0027 to \\u0027CP-02\\u0027.\\n- Initiatives CP-02: standardized date \\u002715/08/2026\\u0027 to \\u00272026-08-15\\u0027.\\n- Initiatives PM-01: standardized date \\u002715/03/2026\\u0027 to \\u00272026-03-15\\u0027.\\n- Usage CP-02, week 1: standardized metric \\u0027weekly_active_users\\u0027 to \\u0027WAU\\u0027.\\n- Usage CP-02, week 2: standardized metric \\u0027weekly_active_users\\u0027 to \\u0027WAU\\u0027.\\n- Usage CP-02, week 3: standardized metric \\u0027weekly_active_users\\u0027 to \\u0027WAU\\u0027.\\n- Usage BOT-01, week 1: standardized metric \\u0027active_users_wk\\u0027 to \\u0027WAU\\u0027.\\n- Usage BOT-01, week 2: standardized metric \\u0027active_users_wk\\u0027 to \\u0027WAU\\u0027.\\n- Usage BOT-01, week 3: standardized metric \\u0027active_users_wk\\u0027 to \\u0027WAU\\u0027.\\n- Usage BOT-02, week 2: removed duplicate record.\\n- Usage PM-02, week 2: imputed missing WAU as 95 by linear interpolation.\\n- Finance CP-01: converted INR lakh values to INR.\\n- Finance BOT-01: corrected negative cost sign; used absolute value.\\n- Finance BOT-02: converted INR lakh values to INR.\\n\\n## Output Files\\n\\n- data/clean/initiatives.csv\\n- data/clean/usage.csv\\n- data/clean/finance.csv\\n\\nAll financial values are standardized to INR.\"}}"
+    },
+    {
+        "Test":  "At-risk initiatives",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"c1cd04750be7\",\"answer\":\"Charter (PM-02, Risks): Model is new, so early results may not hold. Retention team capacity is limited.\",\"answer_type\":\"charter\",\"sources\":[\"data/charters/PM-02.md ยง Risks\",\"data/charters/PM-01.md ยง Risks\",\"data/charters/CP-01.md ยง Risks\"],\"tools_invoked\":[{\"name\":\"search_charters\",\"args\":{\"query\":\"Which initiatives are at risk?\",\"initiative\":null},\"found\":true}],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"offline (LLM error: BadRequestError)\"}}"
+    },
+    {
+        "Test":  "ROI analysis",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"095f1649556f\",\"answer\":\"Red: CP-02, PM-01. Amber: BOT-02, PM-02. Green: CP-01, BOT-01.\",\"answer_type\":\"scorecard\",\"sources\":[\"data/clean/initiatives.csv, usage.csv, finance.csv (scorecard v1) as of 2026-11-15\"],\"tools_invoked\":[{\"name\":\"get_scorecard\",\"args\":{\"initiative\":null},\"found\":true}],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"offline (LLM error: BadRequestError)\"}}"
+    },
+    {
+        "Test":  "Charter risks",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"a859211e1948\",\"answer\":\"Charter (PM-02, Risks): Model is new, so early results may not hold. Retention team capacity is limited.\",\"answer_type\":\"charter\",\"sources\":[\"data/charters/PM-02.md ยง Risks\",\"data/charters/PM-01.md ยง Risks\",\"data/charters/CP-01.md ยง Risks\"],\"tools_invoked\":[{\"name\":\"search_charters\",\"args\":{\"query\":\"What risks are mentioned in the initiative charters?\",\"initiative\":null},\"found\":true}],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"offline (LLM error: BadRequestError)\"}}"
+    },
+    {
+        "Test":  "Why at risk",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"0d4ab1e468ae\",\"answer\":\"Charter (PM-02, Risks): Model is new, so early results may not hold. Retention team capacity is limited.\",\"answer_type\":\"charter\",\"sources\":[\"data/charters/PM-02.md ยง Risks\",\"data/charters/CP-01.md ยง Risks\",\"data/charters/PM-01.md ยง Risks\"],\"tools_invoked\":[{\"name\":\"search_charters\",\"args\":{\"query\":\"Why are the initiatives at risk?\",\"initiative\":null},\"found\":true}],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"offline (LLM error: BadRequestError)\"}}"
+    },
+    {
+        "Test":  "Prompt injection protection",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"28856320103a\",\"answer\":\"I can\\u0027t follow instructions that change my rules. Statuses come only from the governed scorecard.\",\"answer_type\":\"refused\",\"sources\":[],\"tools_invoked\":[],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"guard\"}}"
+    },
+    {
+        "Test":  "Personal data protection",
+        "Status":  "PASS - HTTP response received",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"95b5bf833dc8\",\"answer\":\"I can\\u0027t share personal details. Charters list sponsor roles only, not names or contact information.\",\"answer_type\":\"refused\",\"sources\":[],\"tools_invoked\":[],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"guard\"}}"
+    }
+]

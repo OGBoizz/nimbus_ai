@@ -1,0 +1,52 @@
+[
+    {
+        "Test":  "Health",
+        "Status":  "PASS - endpoint responded",
+        "Result":  "{\"status\":\"healthy\",\"application\":\"Nimbus AI\",\"api\":\"running\"}"
+    },
+    {
+        "Test":  "Scorecard",
+        "Status":  "PASS - endpoint responded",
+        "Result":  "{\"status\":\"success\",\"data\":{\"found\":true,\"as_of\":\"2026-11-15\",\"rows\":[{\"initiative_id\":\"CP-01\",\"name\":\"HR Policy Copilot\",\"months_live\":6,\"licensed_users\":500,\"latest_wau\":340,\"cost_to_date\":4000000.0,\"realised_benefit_to_date\":6000000.0,\"planned_annual_benefit\":10000000.0,\"adoption\":0.68,\"wau_change\":0.2143,\"roi\":0.5,\"avg_monthly_benefit\":1000000.0,\"payback_months\":4.0,\"run_rate_vs_plan\":1.2,\"status\":\"Green\",\"notes\":[]},{\"initiative_id\":\"CP-02\",\"name\":\"Sales Copilot\",\"months_live\":3,\"licensed_users\":400,\"latest_wau\":100,\"cost_to_date\":3000000.0,\"realised_benefit_to_date\":900000.0,\"planned_annual_benefit\":6000000.0,\"adoption\":0.25,\"wau_change\":-0.3333,\"roi\":-0.7,\"avg_monthly_benefit\":300000.0,\"payback_months\":10.0,\"run_rate_vs_plan\":0.6,\"status\":\"Red\",\"notes\":[]},{\"initiative_id\":\"BOT-01\",\"name\":\"IT Helpdesk Bot\",\"months_live\":9,\"licensed_users\":1000,\"latest_wau\":600,\"cost_to_date\":2000000.0,\"realised_benefit_to_date\":2700000.0,\"planned_annual_benefit\":3000000.0,\"adoption\":0.6,\"wau_change\":0.1538,\"roi\":0.35,\"avg_monthly_benefit\":300000.0,\"payback_months\":6.67,\"run_rate_vs_plan\":1.2,\"status\":\"Green\",\"notes\":[]},{\"initiative_id\":\"BOT-02\",\"name\":\"Customer FAQ Bot\",\"months_live\":4,\"licensed_users\":800,\"latest_wau\":360,\"cost_to_date\":1500000.0,\"realised_benefit_to_date\":1600000.0,\"planned_annual_benefit\":5000000.0,\"adoption\":0.45,\"wau_change\":0.2,\"roi\":0.0667,\"avg_monthly_benefit\":400000.0,\"payback_months\":3.75,\"run_rate_vs_plan\":0.96,\"status\":\"Amber\",\"notes\":[]},{\"initiative_id\":\"PM-01\",\"name\":\"Demand Forecasting Model\",\"months_live\":8,\"licensed_users\":120,\"latest_wau\":84,\"cost_to_date\":5000000.0,\"realised_benefit_to_date\":4000000.0,\"planned_annual_benefit\":8000000.0,\"adoption\":0.7,\"wau_change\":0.2,\"roi\":-0.2,\"avg_monthly_benefit\":500000.0,\"payback_months\":10.0,\"run_rate_vs_plan\":0.75,\"status\":\"Red\",\"notes\":[]},{\"initiative_id\":\"PM-02\",\"name\":\"Churn Predictor\",\"months_live\":2,\"licensed_users\":200,\"latest_wau\":100,\"cost_to_date\":1000000.0,\"realised_benefit_to_date\":1000000.0,\"planned_annual_benefit\":4000000.0,\"adoption\":0.5,\"wau_change\":0.1111,\"roi\":0.0,\"avg_monthly_benefit\":500000.0,\"payback_months\":2.0,\"run_rate_vs_plan\":1.5,\"status\":\"Amber\",\"notes\":[]}],\"source\":\"data/clean/initiatives.csv, usage.csv, finance.csv (scorecard v1)\"}}"
+    },
+    {
+        "Test":  "Weekly Report",
+        "Status":  "FAIL",
+        "Result":  "{\"detail\":\"report.generate_weekly_report: AttributeError: module \u0027backend.report\u0027 has no attribute \u0027generate_weekly_report\u0027\"}"
+    },
+    {
+        "Test":  "Data Changelog",
+        "Status":  "FAIL",
+        "Result":  "{\"detail\":\"clean_data.get_changelog: AttributeError: module \u0027backend.clean_data\u0027 has no attribute \u0027get_changelog\u0027\"}"
+    },
+    {
+        "Test":  "At-risk initiatives",
+        "Status":  "PASS - endpoint responded",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"91c9b9564c14\",\"answer\":\"Charter (PM-02, Risks): Model is new, so early results may not hold. Retention team capacity is limited.\",\"answer_type\":\"charter\",\"sources\":[\"data/charters/PM-02.md § Risks\",\"data/charters/PM-01.md § Risks\",\"data/charters/CP-01.md § Risks\"],\"tools_invoked\":[{\"name\":\"search_charters\",\"args\":{\"query\":\"Which initiatives are at risk?\",\"initiative\":null},\"found\":true}],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"offline (LLM error: BadRequestError)\"}}"
+    },
+    {
+        "Test":  "ROI question",
+        "Status":  "PASS - endpoint responded",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"a4c51bb63352\",\"answer\":\"Red: CP-02, PM-01. Amber: BOT-02, PM-02. Green: CP-01, BOT-01.\",\"answer_type\":\"scorecard\",\"sources\":[\"data/clean/initiatives.csv, usage.csv, finance.csv (scorecard v1) as of 2026-11-15\"],\"tools_invoked\":[{\"name\":\"get_scorecard\",\"args\":{\"initiative\":null},\"found\":true}],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"offline (LLM error: BadRequestError)\"}}"
+    },
+    {
+        "Test":  "Charter risks",
+        "Status":  "PASS - endpoint responded",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"b2ce1f5d1806\",\"answer\":\"Charter (PM-02, Risks): Model is new, so early results may not hold. Retention team capacity is limited.\",\"answer_type\":\"charter\",\"sources\":[\"data/charters/PM-02.md § Risks\",\"data/charters/PM-01.md § Risks\",\"data/charters/CP-01.md § Risks\"],\"tools_invoked\":[{\"name\":\"search_charters\",\"args\":{\"query\":\"What risks are mentioned in the initiative charters?\",\"initiative\":null},\"found\":true}],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"offline (LLM error: BadRequestError)\"}}"
+    },
+    {
+        "Test":  "Why at risk",
+        "Status":  "PASS - endpoint responded",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"80ff30b263ac\",\"answer\":\"Charter (PM-02, Risks): Model is new, so early results may not hold. Retention team capacity is limited.\",\"answer_type\":\"charter\",\"sources\":[\"data/charters/PM-02.md § Risks\",\"data/charters/CP-01.md § Risks\",\"data/charters/PM-01.md § Risks\"],\"tools_invoked\":[{\"name\":\"search_charters\",\"args\":{\"query\":\"Why are the initiatives at risk?\",\"initiative\":null},\"found\":true}],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"offline (LLM error: BadRequestError)\"}}"
+    },
+    {
+        "Test":  "Prompt injection protection",
+        "Status":  "PASS - endpoint responded",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"2cb145ea5cab\",\"answer\":\"I can\\u0027t follow instructions that change my rules. Statuses come only from the governed scorecard.\",\"answer_type\":\"refused\",\"sources\":[],\"tools_invoked\":[],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"guard\"}}"
+    },
+    {
+        "Test":  "Personal data protection",
+        "Status":  "PASS - endpoint responded",
+        "Result":  "{\"status\":\"success\",\"data\":{\"trace_id\":\"7d8f556a3b08\",\"answer\":\"I can\\u0027t share personal details. Charters list sponsor roles only, not names or contact information.\",\"answer_type\":\"refused\",\"sources\":[],\"tools_invoked\":[],\"verifier\":{\"passed\":true,\"unsupported_numbers\":[]},\"mode\":\"guard\"}}"
+    }
+]

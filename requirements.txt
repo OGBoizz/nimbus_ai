@@ -1,5 +1,5 @@
 fastapi
-uvicorn
+uvicorn[standard]
 openai
 pandas
 numpy
@@ -11,3 +11,4 @@ pymupdf
 python-docx
 faiss-cpu
 pytest
+httpx
